@@ -34,6 +34,8 @@ class monit (
   $allow          = [ 'localhost' ],
 ){
 
+  warning("Deprecated monit module on node ${::fqdn}, switching to https://forge.puppetlabs.com/sbitio/monit")
+
   validate_bool($httpd)
 
   if $httpd {
