@@ -14,7 +14,6 @@ class monit::config {
     changes => [
       'set startup 1',
     ],
-    require => Class['puppet'],
     notify  => Service['monit'],
   }
 
