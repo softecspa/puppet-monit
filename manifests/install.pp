@@ -1,7 +1,7 @@
 class monit::install {
 
   package {'monit':
-    ensure  => present,
+    ensure  => latest,
   }
 
 }
