@@ -26,6 +26,8 @@
 #   * "@users readonly" (allow users of group 'users' to connect readonly)
 #
 class monit (
+  $service_enable          = true,
+  $service_ensure          = running,
   $check_interval = '120',
   $start_delay    = '30',
   $logfile        = '/var/log/monit.log',

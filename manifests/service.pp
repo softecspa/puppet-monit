@@ -1,7 +1,7 @@
 class monit::service {
   service {'monit':
-    ensure      => running,
-    enable      => true,
+    ensure      => $monit::service_ensure,
+    enable      => $monit::service_enable,
     hasrestart  => true,
     hasstatus   => false,
     status      => 'pidof monit'
