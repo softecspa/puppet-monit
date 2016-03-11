@@ -14,7 +14,7 @@ define monit::smtp(
     owner   => 'root',
     group   => 'root',
     mode    => '0644',
-    content => "set mailserver $smtp_address",
+    content => "set mailserver ${smtp_address}",
     notify  => Service['monit']
   }
 

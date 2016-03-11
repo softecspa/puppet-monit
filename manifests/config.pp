@@ -20,10 +20,10 @@ class monit::config {
 
   if !defined(File[$monit::params::check_dir]) {
     file { $monit::params::check_dir :
-      ensure  => directory,
-      owner   => 'root',
-      group   => 'root',
-      mode    => '0755'
+      ensure => directory,
+      owner  => 'root',
+      group  => 'root',
+      mode   => '0755'
     }
   }
 

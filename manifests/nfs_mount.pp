@@ -19,9 +19,9 @@ define monit::nfs_mount (
 
   if !defined(Concat_build['nfs_mount']) {
     concat_build { 'nfs_mount':
-      order   => ['*.tmp'],
-      target  => "${monit::params::check_dir}/nfs_mount",
-      notify  => Service['monit']
+      order  => ['*.tmp'],
+      target => "${monit::params::check_dir}/nfs_mount",
+      notify => Service['monit']
     }
   }
 
